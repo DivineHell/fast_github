@@ -3,7 +3,8 @@
 DNS_WEB = 'https://www.ipaddress.com'
 GIT_URL = [
     'github.com',
-    'github.global.ssl.fastly.net'
+    'github.global.ssl.fastly.net',
+    'raw.githubusercontent.com',
 ]
 
 # for mac
