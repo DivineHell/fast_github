@@ -1,10 +1,8 @@
 # fast_github
----
 If you find that request github.com is too slowly, you can use this script to let your request fast.
 This tool is just for MAC
 
 # To start using fast_github
----
 - You need have Python3.7(using 3.7 by myself) or higher
 - clone code
 ```shell script

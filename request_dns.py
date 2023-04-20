@@ -17,7 +17,7 @@ def resolve_dns():
     for url in GIT_URL:
         link = f'{DNS_WEB}/site/{url}'
         try:
-            res = requests.get(link, headers=http_header)
+            res = requests.get(link, headers=http_header, timeout=10)
             ips = parse(res.text)
             for i in ips:
                 dns_result.append(f'{i} {url}')
