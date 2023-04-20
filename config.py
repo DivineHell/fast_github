@@ -5,6 +5,7 @@ GIT_URL = [
     'github.com',
     'github.global.ssl.fastly.net',
     'raw.githubusercontent.com',
+    'api.github.com',
 ]
 
 # for mac
