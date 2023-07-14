@@ -4,6 +4,8 @@ import os
 
 from config import GIT_URL
 
+marker = '# add github dns by fast_github'
+
 
 def add_dns(file, update_dnses):
     with open(file, 'r+') as f:
@@ -11,6 +13,9 @@ def add_dns(file, update_dnses):
         f.seek(0)
         f.truncate()
         for line in lines:
+            if line.strip('\n') == marker:
+                continue
+
             x = line.strip('\n').split(' ')
             if len(x) < 2:
                 f.write(line)
@@ -21,7 +26,7 @@ def add_dns(file, update_dnses):
                 f.write(line)
 
         logging.info(f'add dns to {file}')
-        f.write(f'\n# github')
+        f.write(f'{marker}')
         # insert new dns
         for one in update_dnses:
             f.write(f'\n{one}')
